@@ -28,11 +28,11 @@ separator = |
 ;font-2 = Misc\ Termsynu:size=10;-2
 ;font-3 = FontAwesome:size=9;0
 
-font-0 = NotoSans-Regular:size=9;0
-font-1 = Material\\ Icons:size=11;2
-font-2 = xos4\\ Terminus:size=14;0
-font-3 = Siji:pixelsize=11;1
-font-4 = FontAwesome:size=11;0
+font-0 = NotoSans-Regular:size=7;0
+font-1 = Material\\ Icons:size=8;2
+font-2 = xos4\\ Terminus:size=10;0
+font-3 = Siji:pixelsize=9;1
+font-4 = FontAwesome:size=9;0
 
 
 modules-left = mpd i3 
@@ -78,11 +78,11 @@ module-margin-left = 0
 module-margin-right = 6
 
 ;font-0 = NotoSans-Regular:size=10;0
-font-0 = NotoSans-Regular:size=9;0
-font-1 = Material\ Icons:size=11;2
-font-2 = xos4\ Terminus:size=14;0
-font-3 = Siji:pixelsize=11;1
-font-4 = FontAwesome:size=11;0
+font-0 = NotoSans-Regular:size=7;0
+font-1 = Material\\ Icons:size=8;2
+font-2 = xos4\\ Terminus:size=10;0
+font-3 = Siji:pixelsize=9;1
+font-4 = FontAwesome:size=9;0
 
 modules-left = i3 spotify 
 modules-right = cpu memory temperature filesystem xkeyboard alsa wireless-network consumation  battery date        
@@ -312,7 +312,7 @@ bar-progress-empty-foreground = #44
 [module/wireless-network]
 type = internal/network
 ;interface = enp4s0
-interface = wlp5s0
+interface = wlp1s0
 interval = 1.0
 ping-interval = 10
 
@@ -433,7 +433,7 @@ ramp-foreground = #66
 type = internal/i3
 
 pin-workspaces = true
-strip-wsnumbers = true
+strip-wsnumbers = false 
 index-sort = true
 
 ; Use fuzzy (partial) matching on labels when assigning 
@@ -443,12 +443,12 @@ index-sort = true
 ; Default: false
 fuzzy-match = true
 
-ws-icon-0 = 1;♚
-ws-icon-1 = 2;♛
-ws-icon-2 = 3;♜
-ws-icon-3 = 4;♝
-ws-icon-4 = 5;♞
-ws-icon-default = ♟
+;ws-icon-0 = 1;♚
+;ws-icon-1 = 2;♛
+;ws-icon-2 = 3;♜
+;ws-icon-3 = 4;♝
+;ws-icon-4 = 5;♞
+;ws-icon-default = ♟
 
 label-dimmed-underline = ${root.background}
 
@@ -516,7 +516,7 @@ type = custom/script
 interval = 1
 format-prefix = "  "  
 format = <label>
-exec = python   ~/.config/polybar/spotify.py  -f '{play_pause} {song} - {artist} - {album}'
+exec = python ~/.config/polybar/spotify.py  -f '{play_pause} {song} - {artist} - {album}'
 
 format-underline = #1db954
 
